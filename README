@@ -1,0 +1,9 @@
+#Github Actions SendGrid integration test
+
+XXX
+
+1. environment
+  * `SENDGRID_API_KEY`
+  * `SENDGRID_MAIL_FROM`
+  * `SENDGRID_MAIL_TO`
+
