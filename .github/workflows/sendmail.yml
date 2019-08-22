@@ -8,6 +8,8 @@ jobs:
 
     steps:
       - uses: actions/setup-python@v1
+        with:
+          python-version: 3.7.2
       - uses: actions/checkout@master
         with:
           fetch-depth: 1
@@ -25,6 +27,8 @@ jobs:
 
     steps:
       - uses: actions/setup-python@v1
+        with:
+          python-version: 3.7.2
       - uses: actions/checkout@master
         with:
           fetch-depth: 1
