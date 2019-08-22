@@ -10,6 +10,8 @@ from_addr = os.environ.get('SENDGRID_MAIL_FROM')
 to_addr   = os.environ.get('SENDGRID_MAIL_TO')
 git_tag   = os.environ.get('GITHUB_REF')
 
+print("from_addr => %s", from_addr)
+
 sg = sendgrid.SendGridAPIClient(apikey=api_key)
 from_email = Email(from_addr)
 to_email = Email(to_addr)

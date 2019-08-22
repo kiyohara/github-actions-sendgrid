@@ -14,29 +14,16 @@ jobs:
         with:
           fetch-depth: 1
 
-      # - name: Install pipenv
-      #   run: pip install pipenv
-      #
-      # - name: Install requirements libs
-      #   run: pipenv sync
+      - name: Install pipenv
+        run: pip install pipenv
 
-      - name: debug echo
-        run: echo SENDGRID_MAIL_FROM env testing...
+      - name: Install requirements libs
+        run: pipenv sync
 
-      - name: debug env
+      - name: Send mail by send_mail.py
         env:
-          SENDGRID_MAIL_FROM: test env string
-        run: echo SENDGRID_MAIL_FROM env => "${SENDGRID_MAIL_FROM}"
-
-      - name: debug secrets
-        env:
-          SENDGRID_MAIL_FROM: "${{ secrets.SENDGRID_MAIL_FROM }}"
-        run: echo SENDGRID_MAIL_FROM env => "${SENDGRID_MAIL_FROM}"
-
-      # - name: Send mail by send_mail.py
-      #   env:
-      #     SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-      #     SENDGRID_MAIL_FROM: ${{ secrets.SENDGRID_MAIL_FROM }}
-      #     SENDGRID_MAIL_TO: ${{ secrets.SENDGRID_MAIL_TO }}
-      #   run: pipenv run python send_mail.py
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          SENDGRID_MAIL_FROM: ${{ secrets.SENDGRID_MAIL_FROM }}
+          SENDGRID_MAIL_TO: ${{ secrets.SENDGRID_MAIL_TO }}
+        run: pipenv run python send_mail.py
 
