@@ -27,8 +27,8 @@ jobs:
         run: |
           echo secrets.SENDGRID_MAIL_TO => ${{ secrets.SENDGRID_MAIL_TO }}
           echo secrets.SENDGRID_MAIL_FROM => ${{ secrets.SENDGRID_MAIL_FROM }}
-          echo SENDGRID_MAIL_TO env => $SENDGRID_MAIL_TO
-          echo SENDGRID_MAIL_FROM env => $SENDGRID_MAIL_FROM
+          echo SENDGRID_MAIL_TO env => "$SENDGRID_MAIL_TO"
+          echo SENDGRID_MAIL_FROM env => "$SENDGRID_MAIL_FROM"
 
       - name: Send mail by send_mail.py
         env:
