@@ -8,7 +8,7 @@ import base64
 api_key   = os.environ.get('SENDGRID_API_KEY')
 from_addr = os.environ.get('SENDGRID_MAIL_FROM')
 to_addr   = os.environ.get('SENDGRID_MAIL_TO')
-git_tag   = os.environ.get('CIRCLE_TAG')
+git_tag   = os.environ.get('GITHUB_REF')
 
 sg = sendgrid.SendGridAPIClient(apikey=api_key)
 from_email = Email(from_addr)
