@@ -21,16 +21,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - env:
-          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-          SENDGRID_MAIL_FROM: ${{ secrets.SENDGRID_MAIL_FROM }}
-          SENDGRID_MAIL_TO: ${{ secrets.SENDGRID_MAIL_TO }}
-
       - uses: actions/setup-python@v1
       - uses: actions/checkout
         with:
           fetch-depth: 1
 
       - name: Send mail by send_mail.py
+        env:
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          SENDGRID_MAIL_FROM: ${{ secrets.SENDGRID_MAIL_FROM }}
+          SENDGRID_MAIL_TO: ${{ secrets.SENDGRID_MAIL_TO }}
         run: pipenv run python send_mail.py
 
