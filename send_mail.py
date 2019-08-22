@@ -23,7 +23,7 @@ ref. Settings > Mail Settings > Plain Content
 
 message = Mail(
     from_email=from_addr,
-    to_email=to_email,
+    to_email=to_addr,
     subject=subject,
     plain_text_content=plain_text_content)
 
