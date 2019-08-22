@@ -20,22 +20,6 @@ jobs:
       - name: Install requirements libs
         run: pipenv sync
 
-  send_mail:
-    needs: [build]
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/setup-python@v1
-        with:
-          python-version: 3.7.4
-      - uses: actions/checkout@master
-        with:
-          fetch-depth: 1
-
-      - name: Install pipenv
-        run: pip install pipenv
-
       - name: Send mail by send_mail.py
         env:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
