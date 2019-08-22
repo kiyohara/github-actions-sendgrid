@@ -20,9 +20,10 @@ jobs:
       - name: Install requirements libs
         run: pipenv sync
 
+      - name: debug echo
+        run: echo SENDGRID_MAIL_FROM env testing...
+
       - name: debug secrets
-        env:
-          SENDGRID_MAIL_FROM: ${{ secrets.SENDGRID_MAIL_FROM }}
         run: echo SENDGRID_MAIL_FROM env => "${SENDGRID_MAIL_FROM}"
 
       - name: Send mail by send_mail.py
