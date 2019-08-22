@@ -12,6 +12,7 @@ git_tag   = os.environ.get('GITHUB_REF')
 
 print("from_addr => %s" % from_addr)
 print("git_tag => %s" % git_tag)
+print("test env => %s" % os.environ.get('TEST_MY_ENV'))
 
 sg = sendgrid.SendGridAPIClient(apikey=api_key)
 from_email = Email(from_addr)
