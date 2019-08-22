@@ -1,6 +1,11 @@
 name: Send mail
 
-on: [push]
+on:
+  push:
+    branches:
+      - "!*"
+    tags:
+      - "*"
 
 jobs:
   build:
