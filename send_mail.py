@@ -41,8 +41,8 @@ attachment.disposition = Disposition('attachment')
 message.attachment = attachment
 
 try:
-    sg = sendgrid.SendGridAPIClient(api_key)
-    response = sg.client.mail.send.post(request_body=mail.get())
+    sendgrid_client = sendgrid.SendGridAPIClient(api_key)
+    response = sendgrid_client.send(message)
 
     print(response.status_code)
     print(response.body)
