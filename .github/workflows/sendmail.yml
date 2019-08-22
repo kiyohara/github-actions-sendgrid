@@ -25,7 +25,7 @@ jobs:
 
       - name: debug env
         env:
-          SENDGRID_MAIL_FROM: "${{ secrets.SENDGRID_MAIL_FROM }}"
+          SENDGRID_MAIL_FROM: test env string
         run: echo SENDGRID_MAIL_FROM env => "${SENDGRID_MAIL_FROM}"
 
       - name: debug secrets
