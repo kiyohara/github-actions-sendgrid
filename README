@@ -1,6 +1,6 @@
-#Github Actions SendGrid integration test
+# Github Actions SendGrid integration test
 
-1. Setup github repository w/ below secrets
+1. Setup github repository w/ below secrets (Settings > Secrets)
   * `SENDGRID_API_KEY`
   * `SENDGRID_MAIL_FROM`
   * `SENDGRID_MAIL_TO`
