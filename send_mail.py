@@ -15,7 +15,7 @@ plain_text_content = """
 and easy to do anywhere, even with Python
 and easy to do anywhere, even with Python
 and easy to do anywhere, even with Python
-""")
+"""
 """
 if CR is removed, set SendGrid 'Plain Content' setting as 'ACTIVE'
 ref. Settings > Mail Settings > Plain Content
