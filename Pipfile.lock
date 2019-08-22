@@ -1,11 +1,11 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "063bf07a83c4b9d4ede4b2ac60fdd1edd920b0e6a77464955173db4339f1c61a"
+            "sha256": "ae4c09f63eeba0a1a745bfa58d102cf78f16f4ca4c496e348c5c4ac130afe774"
         },
         "pipfile-spec": 6,
         "requires": {
-            "python_version": "3.7.2"
+            "python_version": "3.7.4"
         },
         "sources": [
             {
@@ -18,17 +18,18 @@
     "default": {
         "python-http-client": {
             "hashes": [
+                "sha256:051299b55bbeb14daf1b7de798378960973c060426fb7c7944a0f6e545b969b7",
                 "sha256:7e430f4b9dd2b621b0051f6a362f103447ea8e267594c602a5c502a0c694ee38"
             ],
             "version": "==3.1.0"
         },
         "sendgrid": {
             "hashes": [
-                "sha256:97eb356ea44a18a03e6fe99f02b7942445be306a50f73a7dd35471fe15cc0094",
-                "sha256:9e9d3d75602b8853f174ec959d1af1ac168cd361cbcafc81285fa8c183f7a505"
+                "sha256:297d33363a70df9b39419210e1273b165d487730e85c495695e0015bc626db71",
+                "sha256:8b82c8c801dde8180a567913a9f80d8a63f38e39f209edde302b6df899b4bca1"
             ],
             "index": "pypi",
-            "version": "==5.6.0"
+            "version": "==6.0.5"
         }
     },
     "develop": {}
