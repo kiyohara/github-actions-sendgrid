@@ -25,6 +25,5 @@ jobs:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
           SENDGRID_MAIL_FROM: ${{ secrets.SENDGRID_MAIL_FROM }}
           SENDGRID_MAIL_TO: ${{ secrets.SENDGRID_MAIL_TO }}
-          TEST_MY_ENV: this is test my env
         run: pipenv run python send_mail.py
 
